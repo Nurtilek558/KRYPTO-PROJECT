@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: "Rubik", serif;
   background-color: #160e33;
+  overflow-x: hidden;
 }
 
 .container {
