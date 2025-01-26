@@ -21,6 +21,11 @@
       <header>
         <h1 class="logo-name">Krypto</h1>
         <div class="nav-links">
+          <div class="burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <nav class="links">
             <ul>
               <li><a href="#how-works">HOW IT WORKS</a></li>
@@ -31,6 +36,7 @@
             </ul>
           </nav>
         </div>
+        
         <div class="custom-select" style="width: 200px">
           <select>
             <option value="0">USA</option>
@@ -122,7 +128,7 @@
       <img class="eth-trade" src="./IMG/eth-trade-coins.svg" alt="" />
       <section id="cryptos" class="crypto-section">
         <h1>Available Cryptos</h1>
-        <p>
+        <p class="crypto-subtitle">
           Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum,
           sed vel.
         </p>
@@ -139,7 +145,7 @@
                     elementum, sed vel.
                   </p>
                   <strong class="price">$43.7K</strong>
-                  <button>Trade Now</button>
+                  <button class="btn">Trade Now</button>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -151,7 +157,7 @@
                     elementum, sed vel.
                   </p>
                   <strong class="price">$158</strong>
-                  <button>Trade Now</button>
+                  <button class="button">Trade Now</button>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -163,7 +169,7 @@
                     elementum, sed vel.
                   </p>
                   <strong class="price">$3K</strong>
-                  <button>Trade Now</button>
+                  <button class="button">Trade Now</button>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -175,7 +181,7 @@
                     elementum, sed vel.
                   </p>
                   <strong class="price">$43.7K</strong>
-                  <button>Trade Now</button>
+                  <button class="btn">Trade Now</button>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -187,7 +193,7 @@
                     elementum, sed vel.
                   </p>
                   <strong class="price">$158</strong>
-                  <button>Trade Now</button>
+                  <button class="button">Trade Now</button>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -199,7 +205,7 @@
                     elementum, sed vel.
                   </p>
                   <strong class="price">$3K</strong>
-                  <button>Trade Now</button>
+                  <button class="button">Trade Now</button>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -211,7 +217,7 @@
                     elementum, sed vel.
                   </p>
                   <strong class="price">$43.7K</strong>
-                  <button>Trade Now</button>
+                  <button class="btn">Trade Now</button>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -223,7 +229,7 @@
                     elementum, sed vel.
                   </p>
                   <strong class="price">$158</strong>
-                  <button>Trade Now</button>
+                  <button class="button">Trade Now</button>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -235,11 +241,13 @@
                     elementum, sed vel.
                   </p>
                   <strong class="price">$3K</strong>
-                  <button>Trade Now</button>
+                  <button class="button">Trade Now</button>
                 </div>
               </div>
             </div>
             <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
         <img
@@ -537,6 +545,8 @@
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
               </div>
             </div>
             <img class="bitcoin-users" src="./IMG/Bitcoin-users.svg" alt="" />
@@ -636,7 +646,6 @@
               <li><a href="#cryptos">Cryptos</a></li>
               <li><a href="#features">Features</a></li>
               <li><a href="#testimonial">Testimonial</a></li>
-              <li><a href="#university">University</a></li>
             <li><a href="#">Blogs</a></li>
           </ul>
         </div>
@@ -652,12 +661,20 @@
         <div class="footer-section">
           <h3>NEWSLETTER</h3>
           <p class="users">Over 25000 people have subscribed</p>
-          <form class="newsletter-form">
+          <form class="newsletter-form" onsubmit="showConfirmation(event)">
             <input type="email" placeholder="Enter your email" required />
             <button type="submit">SUBSCRIBE</button>
           </form>
           <p class="no-spam">We don’t sell your email and spam</p>
         </div>
+        <div id="confirmation-modal" class="modal">
+          <div class="modal-content">
+            <p>🎉 Thank you for subscribing! 🎉</p>
+            <button onclick="closeModal()">Close</button>
+          </div>
+        </div>
+        
+                
         <div class="footer-bottom">
           <div>
             <a href="#">Privacy & Terms</a>
@@ -684,6 +701,8 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/burger-menu.js"></script>
+    <script src="./js/data-submit.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
